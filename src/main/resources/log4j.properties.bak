@@ -1,0 +1,13 @@
+log4j.rootLogger=DEBUG, MATHHELPER, STDOUT
+
+log4j.appender.STDOUT=org.apache.log4j.ConsoleAppender
+log4j.appender.STDOUT.Target=System.out
+log4j.appender.STDOUT.layout=org.apache.log4j.PatternLayout
+log4j.appender.STDOUT.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} [%-5p] %c{1}:%L - %m%n
+
+log4j.appender.MATHHELPER=org.apache.log4j.RollingFileAppender
+log4j.appender.MATHHELPER.File=math_helper.log
+log4j.appender.MATHHELPER.MaxFileSize=10240Kb
+log4j.appender.MATHHELPER.MaxBackupIndex=5
+log4j.appender.MATHHELPER.layout=org.apache.log4j.PatternLayout  
+log4j.appender.MATHHELPER.layout.conversionPattern=%d{yyyy.MM.dd HH:mm:ss.SSS} [%-5p] <%t> %c{1}:%L - %m%n
